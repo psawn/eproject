@@ -1,0 +1,169 @@
+body{
+    font-family: 'Be Vietnam', sans-serif;
+    background-color: #f8f9fa;
+    font-size: 13px;
+    color:#2e2e2e;
+}
+.menu {
+    font-size: 16px;
+}
+.slide-show {
+    margin-top: 10px;
+}
+.button-slide {
+    background-image: linear-gradient(to right, #fac184 0%, #a556aa 40%, #8fc0f4 61%, #84fab0 100%);
+    transition:0.5s;
+    background-size: 190% auto;
+    font-weight: 900;
+    padding: 10px 20px;
+    border-radius: 15px;
+    opacity: 0.8;
+    font-size: 16px;
+    box-shadow: 0 5px 20px rgba(246,86,86,0.45);
+    color: #f3f3f3;
+}
+.button-slide:hover {
+    text-decoration: none;
+    cursor:pointer;
+    background-position: right center;
+    color: #ffffff;
+}
+.new-realease {
+    margin-top: 70px;
+}
+.new-realease-tittle {
+    padding-top: 10px;
+}
+.release-post img {
+    width: 100%;
+    border-radius: 8px;
+}
+.release-post h3,.release-post p {
+    margin-left: 10px;
+}
+.event {
+    margin-top: 80px;
+    margin-bottom: 10px;
+}
+.event img {
+    width: 450px;
+    height: 450px;
+}
+.event-post {
+    position: relative;
+}
+.event-post .layer {
+    position: absolute;
+    height: 450px;
+    width: 450px;
+    background-color: #2e2e2e;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+}
+.event-post .layer1 {
+    position: absolute;
+    height: 450px;
+    width: 450px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 50%, rgba(0,0,0,0.9) 100%);
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+}
+.event-post:hover .layer1 {
+    opacity: 0.8;
+}
+.event-post .event-post-date {
+    position: absolute;
+    bottom: 200px;
+    left: 40px;
+    font-size: 20px;
+    color: #ffffff;
+}
+.event-post .event-post-time {
+    position: absolute;
+    bottom: 175px;
+    left: 40px;
+    font-size: 20px;
+    color:  #ffffff;
+}
+.event-post .event-post-title a {
+    position: absolute;
+    bottom: 100px;
+    left: 40px;
+    font-size: 30px;
+    color:  #ffffff;
+    transition: 0.4s;
+}
+.event-post .event-post-address {
+    position: absolute;
+    bottom: 50px;
+    left: 40px;
+    font-size: 20px;
+    color:  #ffffff;
+}
+.event-post:hover .event-post-title a , .event-post-title:hover a{
+    color: rgb(246,86,86);
+    text-decoration: none;
+}
+.new-realease-tittle {
+    margin-bottom: 65px;
+}
+.new-realease-tittle h2 {
+    display: inline-block;
+    float: left;
+}
+.new-realease-tittle a {
+    display: inline-block;
+    float: right;
+    font-size: 16px;
+    margin-top: 14px;
+}
+.col-2 a {
+    font-size: 16px;
+}
+.section-more {
+    color: #92999e;
+    position: relative;
+    transition: 0.4s;
+}
+.section-more:after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color:rgb(246,86,86);
+    bottom: 0;
+    left: 0;
+    transition: 0.4s;
+}
+.section-more:hover {
+    text-decoration: none;
+    color: rgb(246,86,86);
+}
+.section-more:hover:after {
+    width: 100%;
+}
+.footer {
+    margin-top: 70px;
+}
+.social-network {
+    margin-top: 10px;
+    padding-left: 0;
+    font-size: 20px;
+}
+.social-network a i {
+    font-size: 17px;
+    background: #000000;
+    color: #ffffff;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.5s;
+    margin-right: 10px;
+}
+.social-network i:hover{
+    background-color: #507bfe;
+}
