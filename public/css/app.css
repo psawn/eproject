@@ -28,26 +28,39 @@ body{
     background-position: right center;
     color: #ffffff;
 }
-.new-realease {
+.new-realease,.new-single {
     margin-top: 70px;
 }
-.new-realease-tittle {
+.new-realease-tittle,.new-single-tittle {
     padding-top: 10px;
 }
-.release-post img {
-    width: 100%;
+.realease-post,.single-post {
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
     border-radius: 8px;
 }
-.release-post h3,.release-post p {
-    margin-left: 10px;
+.realease-post img,.single-post img {
+    width: 100%;
+    border-radius: 8px 8px 0 0 ;
+    margin-bottom: 10px;
 }
-.event {
+.realease-post h3,.realease-post p,.single-post h3,.single-post p {
+    margin-left: 15px;
+}
+.realease-post p,.single-post p {
+    padding-bottom: 15px;
+}
+.event,.news {
     margin-top: 80px;
     margin-bottom: 10px;
 }
 .event img {
     width: 450px;
     height: 450px;
+}
+.news img {
+    width: 100%;
 }
 .event-post {
     position: relative;
@@ -106,14 +119,14 @@ body{
     color: rgb(246,86,86);
     text-decoration: none;
 }
-.new-realease-tittle {
+.new-realease-tittle,.new-single-tittle {
     margin-bottom: 65px;
 }
-.new-realease-tittle h2 {
+.new-realease-tittle h2,.new-single-tittle h2 {
     display: inline-block;
     float: left;
 }
-.new-realease-tittle a {
+.new-realease-tittle a,.new-single-tittle a {
     display: inline-block;
     float: right;
     font-size: 16px;
@@ -144,8 +157,42 @@ body{
 .section-more:hover:after {
     width: 100%;
 }
+.news-post {
+    position: relative;
+    margin-bottom: 10px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+.news-post-tittle {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    color: #444951;
+    font-size: 26px;
+}
+.news-post-date {
+    padding-right: 20px;
+    padding-left: 20px;
+    color: #92999e;
+    margin-top: 10px;
+    display: block;
+    font-size: 14px;
+}
+.news-post-content {
+    padding: 20px;
+    font-size: 15px;
+    color: #444951;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 24px;
+    margin: 0;
+    letter-spacing: 0.4px;
+}
 .footer {
+    padding-top: 20px;
     margin-top: 70px;
+    background-color: #efefef;
+    color: #000000;
 }
 .social-network {
     margin-top: 10px;
@@ -166,4 +213,8 @@ body{
 }
 .social-network i:hover{
     background-color: #507bfe;
+}
+.contact-us h3,.find-us h3 {
+    font-size: 28px;
+    font-weight: 600;
 }
