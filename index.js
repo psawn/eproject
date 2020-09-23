@@ -29,3 +29,9 @@ const db = new mssql.Request();
 app.get("/",function (req,res) {
     res.render("home");
 })
+app.get("/dang-ky",function (req,res) {
+    res.render("dangky");
+})
+app.get("/dang-nhap",function (req,res) {
+    res.render("dangnhap");
+})

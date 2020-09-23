@@ -7,6 +7,12 @@ body{
 .menu {
     font-size: 16px;
 }
+.menu .form-margin-left {
+    margin-left:150px ;
+}
+.menu .user-account {
+    font-size: 22px;
+}
 .slide-show {
     margin-top: 10px;
 }
@@ -56,7 +62,7 @@ body{
     margin-bottom: 10px;
 }
 .event img {
-    width: 450px;
+    width: 445px;
     height: 450px;
 }
 .news img {
@@ -68,20 +74,22 @@ body{
 .event-post .layer {
     position: absolute;
     height: 450px;
-    width: 450px;
+    width: 445px;
     background-color: #2e2e2e;
     top: 0;
     left: 0;
-    opacity: 0.5;
+    opacity: 0.4;
 }
 .event-post .layer1 {
     position: absolute;
     height: 450px;
-    width: 450px;
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 50%, rgba(0,0,0,0.9) 100%);
+    width: 445px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 50%, rgba(0, 0, 0, 0.9) 100%);
     bottom: 0;
     left: 0;
     opacity: 0;
+    -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 .event-post:hover .layer1 {
     opacity: 0.8;
@@ -193,6 +201,7 @@ body{
     margin-top: 70px;
     background-color: #efefef;
     color: #000000;
+    padding-bottom: 30px;
 }
 .social-network {
     margin-top: 10px;
@@ -217,4 +226,60 @@ body{
 .contact-us h3,.find-us h3 {
     font-size: 28px;
     font-weight: 600;
+}
+
+/*css dang ky*/
+.form {
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+.registerbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+.registerbtn:hover {
+    opacity: 1;
+}
+a {
+    color: dodgerblue;
+}
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+#psw {
+    position: relative;
+}
+#btn-show-pass {
+    position: absolute;
+    top: 313px;
+    right: 130px;
+    font-size: 15px;
+}
+#btn-show-pass:hover {
+    cursor: pointer;
 }
