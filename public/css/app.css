@@ -1,5 +1,5 @@
 body{
-    font-family: 'Be Vietnam', sans-serif;
+    font-family: 'Nunito', sans-serif;
     background-color: #f8f9fa;
     font-size: 13px;
     color:#2e2e2e;
@@ -54,6 +54,24 @@ a:hover {
     width: 100%;
     border-radius: 8px 8px 0 0 ;
     margin-bottom: 10px;
+    position: relative;
+}
+.realease-post .play-icon,.single-post .play-icon {
+    position: absolute;
+    top: 100px;
+    left: 128px;
+    color: #f3f3f3;
+    font-size: 40px;
+    opacity: 0;
+    transform: scale(0);
+    transition: 1s;
+}
+.realease-post:hover .play-icon,.single-post:hover .play-icon {
+    opacity: 1;
+    transform: scale(1);
+}
+.play-icon:hover {
+    color:#8fc0f4;
 }
 .realease-post h3,.realease-post p,.single-post h3,.single-post p {
     margin-left: 15px;
@@ -171,13 +189,30 @@ a:hover {
     width: 100%;
 }
 .news-post {
+    height: 480px;
     position: relative;
     margin-bottom: 10px;
     background-color: #fff;
     -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.1);
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
+.news-post .layer2{
+    position: absolute;
+    height: 223px;
+    width: 445px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 50%, rgba(0, 0, 0, 0.7) 100%);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    transition: 0.4s;
+}
+.news-post:hover .layer2 {
+    opacity: 1;
+}
 .news-post-tittle {
+    height: 80px;
     padding-top: 10px;
     padding-right: 20px;
     padding-left: 20px;
@@ -196,7 +231,7 @@ a:hover {
     display: block;
     font-size: 14px;
 }
-.news-post-content {
+.news-post-summary {
     padding: 20px;
     font-size: 15px;
     color: #444951;
