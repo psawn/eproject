@@ -4,6 +4,9 @@ body{
     font-size: 13px;
     color:#2e2e2e;
 }
+a:hover {
+    text-decoration: none;
+}
 .menu {
     font-size: 16px;
 }
@@ -45,6 +48,7 @@ body{
     -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.1);
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
     border-radius: 8px;
+    color:#2e2e2e;
 }
 .realease-post img,.single-post img {
     width: 100%;
@@ -90,6 +94,7 @@ body{
     opacity: 0;
     -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.1);
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    transition: 0.4s;
 }
 .event-post:hover .layer1 {
     opacity: 0.8;
@@ -178,6 +183,10 @@ body{
     padding-left: 20px;
     color: #444951;
     font-size: 26px;
+    transition: 0.4s;
+}
+.news-post:hover .news-post-tittle {
+    color: rgb(246,86,86);
 }
 .news-post-date {
     padding-right: 20px;
@@ -228,7 +237,7 @@ body{
     font-weight: 600;
 }
 
-/*css dang ky*/
+/*css dang ky,dangnhap*/
 .form {
     margin-top: 10px;
     margin-bottom: 100px;
