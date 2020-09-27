@@ -35,3 +35,29 @@ app.get("/dang-ky",function (req,res) {
 app.get("/dang-nhap",function (req,res) {
     res.render("dangnhap");
 })
+
+// render the loai, nghe si
+app.get("/EDM",function (req,res) {
+    res.render("EDM");
+})
+app.get("/Rap",function (req,res) {
+    res.render("Rap-HipHop");
+})
+app.get("/Pop",function (req,res) {
+    res.render("Pop");
+})
+app.get("/Vietnam",function (req,res) {
+    res.render("singer");
+})
+app.get("/us-uk",function (req,res) {
+    res.render("us-uk");
+})
+app.get("/korea",function (req,res) {
+    res.render("korea");
+})
+app.get("/top-selling",function (req,res) {
+    res.render("Top-selling");
+})
+app.get("/thanh-toan",function (req,res) {
+    res.render("buy");
+})
