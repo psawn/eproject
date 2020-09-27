@@ -61,3 +61,11 @@ app.get("/top-selling",function (req,res) {
 app.get("/thanh-toan",function (req,res) {
     res.render("buy");
 })
+
+// render about us, liveshow
+app.get("/about-us",function (req,res){
+    res.render("aboutus")
+})
+app.get("/live-show",function (req,res){
+    res.render("liveshow")
+})
