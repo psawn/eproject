@@ -1,0 +1,62 @@
+body{
+    font-family: 'Nunito', sans-serif;
+    background-color: #f8f9fa;
+    font-size: 13px;
+    color:#2e2e2e;
+}
+.content-area{
+    padding-top: 30px;
+}
+.live-show-area{
+    margin-bottom: 30px;
+    padding: 30px 30px;
+    background-color: #1b2039;
+    border-radius: 5px;
+    box-shadow:  0 0 50px 0 rgba(0,0,0,0.3) ;
+}
+.image-area{
+    position: relative;
+    margin: 0 auto;
+}
+.image-area-center{
+    text-align: center;
+}
+.live-show-date{
+    width: 90px;
+    height: 100px;
+    font-weight: 600;
+    word-break: break-word;
+    position: absolute;
+    top: -14px;
+    left: 20%;
+    border: 5px solid #1b2039;
+    text-align: center;
+    align-content: center;
+    font-size: 16px;
+    padding: 5px;
+    color: #ffffff;
+    border-radius: 20px 0 20px 0;
+    background-image: -webkit-linear-gradient( 90deg, rgb(22, 26, 46) 0%, rgb(237, 63, 179) 0%, rgb(59, 200, 231) 0%, rgb(32, 167, 196) 100%);
+}
+.header-area{
+    font-size: 16px;
+    color: #3bc8e7;
+}
+.header-area .name-live-show{
+    text-align: left;
+    font-weight: 400;
+    line-height: 25px;
+}
+.header-area .adress-live-show{
+    float: right;
+    font-weight: 400;
+    line-height: 25px;
+}
+.entry-content-area{
+    margin-top: 15px;
+}
+.entry-content-area p{
+    color: #ffffff;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}

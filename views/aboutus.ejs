@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My shop</title>
+    <link rel="stylesheet" href="/libs/fontawesome/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/aboutus.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+<%- include('menu') %>
+    <section class="section body_content">
+    <div class="container">
+        <div class="aboutUs_page col-12">
+            <div class="aboutUs_title col-12">
+                <h1>About Us</h1>
+                <div class="aboutUs_page_description col-9">
+                    <h3>Rhythm House is a music store in the city which offers not only music but contests and live shows too</h3>
+                </div>
+                <div class="aboutUs_store">
+                    <img src="imgs/store.jpg">
+                </div>
+            </div>
+            <div class="aboutUs_story col-12">
+                <div class="aboutUs_story_block row">
+                    <div class="aboutUs_story_block_text col-6">
+                        We caters to almost all the age groups by providing the CDs, tapes of poems for kids, latest pop music collection for teenagers
+                    </div>
+                    <div class="aboutUs_story_block_image col-6">
+                        <img src="imgs/old%20record.jpg"/>
+                    </div>
+                </div>
+                <div class="aboutUs_story_block row">
+                    <div class="aboutUs_story_block_image col-6">
+                        <img src="imgs/old%20record.jpg"/>
+                    </div>
+                    <div class="aboutUs_story_block_text col-6">
+                        Rhythm House also caters to a slightly older age group and boasts of the largest collection of regional and devotional music.
+                        if someone wants to pick up a good 60's or 70's rock album,they will order it within a week
+                    </div>
+                </div>
+                <div class="aboutUs_story_block row">
+                    <div class="aboutUs_story_block_text col-6">
+                        Besides music, one can find a number of music related magazines on sale
+                    </div>
+                    <div class="aboutUs_story_block_image col-6">
+                        <img src="imgs/old%20record.jpg"/>
+                    </div>
+                </div>
+                <div class="aboutUs_story_block row">
+                    <div class="aboutUs_story_contact_us col-6">
+                        <form action="#" method="post" class="aboutus_form">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class=" col-12">
+                                        <input type="text" name="your-name" value="" size="40" class="form-control feedback" aria-required="true" aria-invalid="false" placeholder="Your Name">
+                                    </div>
+                                    <div class="col-12"><input type="email" name="your-email" value="" size="40" class="form-control feedback" aria-required="true" aria-invalid="false" placeholder="Email"></div>
+                                    <div class="col-12"><input type="text" name="your-subject" value="" size="40" class="form-control feedback" aria-invalid="false" placeholder="Phone number"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12"><textarea name="your-message" cols="40" rows="10" class="form-control feedback" aria-invalid="false" placeholder="Your Message ..."></textarea></div>
+                                </div>
+                                <div class="submit_feedback row">
+                                    <div class="col-12"><button type="submit"class="btn btn-primary col-12 feedback">Send</button></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="aboutUs_story_block_text col-6">
+                        <h1>Feed back</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</section>
+<%- include('footer') %>
+</body>
+</html>

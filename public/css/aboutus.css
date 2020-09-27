@@ -1,0 +1,49 @@
+body{
+    font-family: 'Nunito', sans-serif;
+    background-color: #f8f9fa;
+    font-size: 13px;
+    color:#2e2e2e;
+}
+.body_content{
+    background-color: #ffffff;
+    color: #0e2d68;
+}
+.aboutUs_page{
+}
+.aboutUs_title {
+    padding: 30px 0;
+    text-align: center;
+    line-height: 1.5;
+}
+.aboutUs_page_description{
+    margin: 0 auto;
+}
+.aboutUs_title h1{
+    font-weight: 600;
+}
+.aboutUs_story{
+    padding: 0;
+}
+.aboutUs_story_block{
+    margin: 40px auto;
+}
+.aboutUs_story_block_text{
+    padding: 40px 60px 0 60px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+.aboutUs_story_block_image{
+    padding: 0;
+}
+img{
+    max-width: 100%;
+}
+.feedback{
+    margin: 10px 0;
+}
+
+
+
+
+
