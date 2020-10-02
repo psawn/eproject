@@ -16,7 +16,7 @@ const config = {
     server: '101.99.13.2',
     user:'sa',
     password:'z@GH7ytQ',
-    database:'test'
+    database:'T2005E_LMAO'
 }
 // connect db
 mssql.connect(config,function (err) {
@@ -27,7 +27,16 @@ mssql.connect(config,function (err) {
 const db = new mssql.Request();
 
 app.get("/",function (req,res) {
-    res.render("home");
+    let sql_text='select top 2 * from T2005E_LMAO_Event order by NgayDienRa desc ;select top 2 * from T2005E_LMAO_TinTuc order by NgayDang desc;select top 4 * from T2005E_LMAO_BaiHat,T2005E_LMAO_NgheSi where T2005E_LMAO_BaiHat.IDNgheSi=T2005E_LMAO_NgheSi.IDNgheSi order by SoLuongDaBan desc;select top 8 * from T2005E_LMAO_BaiHat,T2005E_LMAO_NgheSi where T2005E_LMAO_BaiHat.IDNgheSi=T2005E_LMAO_NgheSi.IDNgheSi order by NgayPhatHanh desc';
+    db.query(sql_text,function (err,rows) {
+        if(err) res.send(err);
+        else res.render("home",{
+            events:rows.recordsets[0],
+            tintucs:rows.recordsets[1],
+            topsellings:rows.recordsets[2],
+            singles:rows.recordsets[3],
+        });
+    })
 })
 app.get("/dang-ky",function (req,res) {
     res.render("dangky");
@@ -35,6 +44,10 @@ app.get("/dang-ky",function (req,res) {
 app.get("/dang-nhap",function (req,res) {
     res.render("dangnhap");
 })
+app.get("/chitiettintuc",function (req,res) {
+    res.render("chitiettintuc");
+})
+// render about-us, liveshow
 app.get("/about-us",function (req,res){
     res.render("aboutus")
 })

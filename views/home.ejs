@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My shop</title>
+    <title>Rhythm Shop</title>
     <link rel="stylesheet" href="/libs/fontawesome/css/all.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
@@ -31,8 +31,7 @@
                     <div class="carousel-item">
                         <img class="d-block w-100" src="/imgs/slide2.jpg" alt="Second slide">
                         <div class="carousel-caption d-none d-md-block">
-                            <h3>TOMORROWLAND</h3>
-                            <h1>AROUND THE WORLD</h1>
+                            <h1>TOMORROWLAND</h1>
                             <p>
                                 A two-day digital festival, with 8 stages and over 60 artists.
                                 More than 1 million People of Tomorrow from all over the globe tuned in and celebrated together.
@@ -66,46 +65,18 @@
                     </a>
                 </div>
                 <div class="row">
-                    <div class="col-3">
-                        <a href="#">
-                            <article class="realease-post">
-                                <img src="/imgs/cover1.jpg">
-                                <div class="play-icon"><i class="far fa-play-circle"></i></div>
-                                <h3>Forbidden Forest</h3>
-                                <p>Chris S.</p>
-                            </article>
-                        </a>
-                    </div>
-                    <div class="col-3">
-                        <a href="#">
-                            <article class="realease-post">
-                                <img src="/imgs/cover1.jpg">
-                                <div class="play-icon"><i class="far fa-play-circle"></i></div>
-                                <h3>Forbidden Forest</h3>
-                                <p>Chris S.</p>
-                            </article>
-                        </a>
-                    </div>
-                    <div class="col-3">
-                        <a href="#">
-                            <article class="realease-post">
-                                <img src="/imgs/cover1.jpg">
-                                <div class="play-icon"><i class="far fa-play-circle"></i></div>
-                                <h3>Forbidden Forest</h3>
-                                <p>Chris S.</p>
-                            </article>
-                        </a>
-                    </div>
-                    <div class="col-3">
-                        <a href="#">
-                            <article class="realease-post">
-                                <img src="/imgs/cover1.jpg">
-                                <div class="play-icon"><i class="far fa-play-circle"></i></div>
-                                <h3>Forbidden Forest</h3>
-                                <p>Chris S.</p>
-                            </article>
-                        </a>
-                    </div>
+                    <% topsellings.map(e=>{ %>
+                        <div class="col-3">
+                            <a href="#">
+                                <article class="realease-post">
+                                    <img src="<%= e.Anh %>">
+                                    <div class="play-icon"><i class="far fa-play-circle"></i></div>
+                                    <h3 style="font-size: 24px"><%= e.TenBaiHat %></h3>
+                                    <p><%= e.NgheDanh %></p>
+                                </article>
+                            </a>
+                        </div>
+                    <% })%>
                 </div>
             </div>
             <div class="event">
@@ -117,36 +88,25 @@
                             See All
                         </a>
                     </div>
-                    <div class="col-5">
-                        <a href="#">
-                            <article class="event-post">
-                                <img src="/imgs/event1.jpg">
-                                <div class="layer"></div>
-                                <div class="layer1"></div>
-                                <div class="event-post-date">March 11, 2021</div>
-                                <div class="event-post-time">8:00 pm</div>
-                                <div class="event-post-title">
-                                    <a href="#">Big Daddy</a>
-                                </div>
-                                <div class="event-post-address">1 East Plumb Branch St.Saint Petersburg, FL 33702</div>
-                            </article>
-                        </a>
-                    </div>
-                    <div class="col-5">
-                        <a href="#">
-                            <article class="event-post">
-                                <img src="/imgs/event1.jpg">
-                                <div class="layer"></div>
-                                <div class="layer1"></div>
-                                <div class="event-post-date">March 11, 2021</div>
-                                <div class="event-post-time">8:00 pm</div>
-                                <div class="event-post-title">
-                                    <a href="#">Big Daddy</a>
-                                </div>
-                                <div class="event-post-address">1 East Plumb Branch St.Saint Petersburg, FL 33702</div>
-                            </article>
-                        </a>
-                    </div>
+                    <% events.map(e=>{ %>
+                        <div class="col-5">
+                            <a href="#">
+                                <article class="event-post">
+                                    <img src="<%= e.Anh %>">
+                                    <div class="layer"></div>
+                                    <div class="layer1"></div>
+                                    <div class="event-post-date"><%= e.NgayDienRa.toLocaleDateString(undefined, options={
+                                            year: 'numeric', month: 'long', day: 'numeric'
+                                        }) %></div>
+                                    <div class="event-post-time"><%= e.GioDienRa.toLocaleTimeString(undefined, {timeZone:'Antarctica/Troll',hour: '2-digit', minute:'2-digit'}); %></div>
+                                    <div class="event-post-title">
+                                        <a href="#"><%= e.TenEvent %></a>
+                                    </div>
+                                    <div class="event-post-address"><%= e.DiaChi %></div>
+                                </article>
+                            </a>
+                        </div>
+                    <% }) %>
                 </div>
             </div>
             <div class="new-single">
@@ -157,86 +117,18 @@
                     </a>
                 </div>
                 <div class="row">
-                    <div class="col-3">
-                        <a href="#">
-                            <article class="single-post">
-                                <img src="/imgs/cover1.jpg">
-                                <div class="play-icon"><i class="far fa-play-circle"></i></div>
-                                <h3>Forbidden Forest</h3>
-                                <p>Chris S.</p>
-                            </article>
-                        </a>
-                    </div>
-                    <div class="col-3">
-                        <a href="#">
-                            <article class="single-post">
-                                <img src="/imgs/cover1.jpg">
-                                <div class="play-icon"><i class="far fa-play-circle"></i></div>
-                                <h3>Forbidden Forest</h3>
-                                <p>Chris S.</p>
-                            </article>
-                        </a>
-                    </div>
-                    <div class="col-3">
-                        <a href="#">
-                            <article class="single-post">
-                                <img src="/imgs/cover1.jpg">
-                                <div class="play-icon"><i class="far fa-play-circle"></i></div>
-                                <h3>Forbidden Forest</h3>
-                                <p>Chris S.</p>
-                            </article>
-                        </a>
-                    </div>
-                    <div class="col-3">
-                        <a href="#">
-                            <article class="single-post">
-                                <img src="/imgs/cover1.jpg">
-                                <div class="play-icon"><i class="far fa-play-circle"></i></div>
-                                <h3>Forbidden Forest</h3>
-                                <p>Chris S.</p>
-                            </article>
-                        </a>
-                    </div>
-                    <div class="col-3">
-                        <a href="#">
-                            <article class="single-post">
-                                <img src="/imgs/cover1.jpg">
-                                <div class="play-icon"><i class="far fa-play-circle"></i></div>
-                                <h3>Forbidden Forest</h3>
-                                <p>Chris S.</p>
-                            </article>
-                        </a>
-                    </div>
-                    <div class="col-3">
-                        <a href="#">
-                            <article class="single-post">
-                                <img src="/imgs/cover1.jpg">
-                                <div class="play-icon"><i class="far fa-play-circle"></i></div>
-                                <h3>Forbidden Forest</h3>
-                                <p>Chris S.</p>
-                            </article>
-                        </a>
-                    </div>
-                    <div class="col-3">
-                        <a href="#">
-                            <article class="single-post">
-                                <img src="/imgs/cover1.jpg">
-                                <div class="play-icon"><i class="far fa-play-circle"></i></div>
-                                <h3>Forbidden Forest</h3>
-                                <p>Chris S.</p>
-                            </article>
-                        </a>
-                    </div>
-                    <div class="col-3">
-                        <a href="#">
-                            <article class="single-post">
-                                <img src="/imgs/cover1.jpg">
-                                <div class="play-icon"><i class="far fa-play-circle"></i></div>
-                                <h3>Forbidden Forest</h3>
-                                <p>Chris S.</p>
-                            </article>
-                        </a>
-                    </div>
+                    <% singles.map(e=>{ %>
+                        <div class="col-3">
+                            <a href="#">
+                                <article class="single-post">
+                                    <img src="<%= e.Anh %>">
+                                    <div class="play-icon"><i class="far fa-play-circle"></i></div>
+                                    <h3 style="font-size: 24px"><%= e.TenBaiHat %></h3>
+                                    <p><%= e.NgheDanh %></p>
+                                </article>
+                            </a>
+                        </div>
+                    <% })%>
                 </div>
             </div>
             <div class="news">
@@ -248,34 +140,29 @@
                             See All
                         </a>
                     </div>
-                    <div class="col-5">
-                        <a href="#">
-                            <article class="news-post">
-                                <img src="/imgs/news1.jpg">
-                                <div class="layer2"></div>
-                                <div class="news-post-header">
-                                    <div class="news-post-tittle">
-                                        Oxy will perform in Minsk again
+                    <% tintucs.map(e=>{ %>
+                        <div class="col-5">
+                            <a href="#">
+                                <article class="news-post">
+                                    <img src="<%= e.Anh %>">
+                                    <div class="layer2"></div>
+                                    <div class="news-post-header">
+                                        <div class="news-post-tittle">
+                                            <%= e.Title %>
+                                        </div>
+                                        <div class="news-post-date">
+                                            <%= e.NgayDang.toLocaleDateString(undefined, options={
+                                                year: 'numeric', month: 'long', day: 'numeric'
+                                            }) %>
+                                        </div>
                                     </div>
-                                    <div class="news-post-date">March 29, 2017</div>
-                                </div>
-                                <div class="news-post-summary">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</div>
-                            </article>
-                        </a>
-                    </div>
-                    <div class="col-5">
-                        <a href="#">
-                            <article class="news-post">
-                                <img src="/imgs/news2.jpg">
-                                <div class="layer2"></div>
-                                <div class="news-post-header">
-                                    <div class="news-post-tittle">Who new Artist of our label? Maybe this..</div>
-                                    <div class="news-post-date">March 29, 2017</div>
-                                </div>
-                                <div class="news-post-summary">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</div>
-                            </article>
-                        </a>
-                    </div>
+                                    <div class="news-post-summary">
+                                        <%= e.TomTat %>
+                                    </div>
+                                </article>
+                            </a>
+                        </div>
+                    <% })%>
                 </div>
             </div>
         </div>
