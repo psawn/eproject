@@ -64,6 +64,14 @@
             showPass=0;
         }
     }
+    function showNote() {
+        var x = document.getElementsByClassName("note-list")[0];
+        x.classList.add("show-note");
+    }
+    function hideNote() {
+        var x = document.getElementsByClassName("note-list")[0];
+        x.classList.remove("show-note");
+    }
 </script>
 <script defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaj0mHlR-keu-9hsR6d-gB0L9BclG04rk&callback=initMap">

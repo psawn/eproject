@@ -62,11 +62,13 @@ a:hover {
     position: absolute;
     top: 100px;
     left: 128px;
-    color: #f3f3f3;
+    color: rgb(246,86,86);
     font-size: 40px;
     opacity: 0;
     transform: scale(0);
     transition: 1s;
+    margin-top: 20px;
+    margin-left: -5px;
 }
 .realease-post:hover .play-icon,.single-post:hover .play-icon {
     opacity: 1;
@@ -284,6 +286,95 @@ a:hover {
     font-weight: 600;
 }
 
+/*css chitiettintuc */
+.detail-news-content-margin {
+    margin-top: 15px;
+}
+.detail-news-img {
+    margin-bottom: 20px;
+}
+.detail-news-title {
+    font-weight: bold;
+}
+.detail-news-content {
+    line-height: 1.618;
+    font-size: 1.1em;
+}
+.news-item {
+    margin-left: -8px;
+    margin-bottom: 20px;
+    float: left;
+    width: 100%;
+    line-height: 1.4;
+    position: relative;
+}
+.news-thumbnail {
+    width: 120px;
+    float: left;
+    margin-right: 8px;
+    margin-bottom: 0;
+}
+.news-thumbnail a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-bottom: 66.67%;
+}
+.news-item-title a {
+    color:#2e2e2e;
+    transition: 0.4s;
+}
+.news-item:hover a{
+    color: rgb(246,86,86);
+}
+/*.news-thumbnail:hover .news-item-title a {*/
+/*    color: rgb(246,86,86);*/
+/*}*/
+/*.news-item-title:hover a {*/
+/*    color: rgb(246,86,86);*/
+/*}*/
+.news-thumbnail img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.comment-area {
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+}
+.comment-area .user-comment-icon {
+    width: 4%;
+    float: left;
+    font-size: 20px;
+}
+.comment-area .comment-input{
+    width: 96%;
+    float: left;
+    resize:none;
+}
+.comment-input:focus {
+    outline: none !important;
+    border: 1px solid #51cbee;
+}
+.comment-btn {
+    margin-left: 28px;
+}
+.note-list{
+    float: right;
+    display: none;
+}
+.note {
+    font-size: 13px;
+}
+.show-note {
+    display: block;
+}
 /*css dang ky,dangnhap*/
 .form {
     margin-top: 10px;

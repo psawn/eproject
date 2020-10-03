@@ -54,7 +54,10 @@ app.get("/about-us",function (req,res){
 app.get("/live-show",function (req,res){
     res.render("liveshow")
 })
-
+// render tintuc
+app.get("/tintuc",function (req,res) {
+    res.render("tintuc")
+})
 // render the loai, nghe si
 app.get("/EDM",function (req,res) {
     res.render("EDM");
