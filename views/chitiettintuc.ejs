@@ -47,30 +47,20 @@
                 </div>
                 <div class="col-4">
                     <div class="listing-news">
-                        <div class="news-item">
-                            <p class="news-thumbnail">
-                                <a href="#">
-                                    <img src="https://znews-photo.zadn.vn/w480/Uploaded/mzdqv/2016_01_22/adadada.jpg">
-                                </a>
-                            </p>
-                            <header>
-                                <p class="news-item-title">
-                                    <a href="#">Con trai Naruto được viết loạt truyện riêng</a>
+                        <% listingnews.map(e=>{ %>
+                            <div class="news-item">
+                                <p class="news-thumbnail">
+                                    <a href="#">
+                                        <img src="<%= e.Anh %>">
+                                    </a>
                                 </p>
-                            </header>
-                        </div>
-                        <div class="news-item">
-                            <p class="news-thumbnail">
-                                <a href="#">
-                                    <img src="https://znews-photo.zadn.vn/w480/Uploaded/mzdqv/2016_01_22/adadada.jpg">
-                                </a>
-                            </p>
-                            <header>
-                                <p class="news-item-title">
-                                    <a href="#">Con trai Naruto được viết loạt truyện riêng</a>
-                                </p>
-                            </header>
-                        </div>
+                                <header>
+                                    <p class="news-item-title">
+                                        <a href="#"><%= e.Title%></a>
+                                    </p>
+                                </header>
+                            </div>
+                        <% })%>
                     </div>
                 </div>
             </div>

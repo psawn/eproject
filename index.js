@@ -45,7 +45,13 @@ app.get("/dang-nhap",function (req,res) {
     res.render("dangnhap");
 })
 app.get("/chitiettintuc",function (req,res) {
-    res.render("chitiettintuc");
+    let sql_text='select * from T2005E_LMAO_TinTuc where IDTinTuc != \'1\'';
+    db.query(sql_text,function (err,rows) {
+        if(err) res.send(err);
+        else res.render("chitiettintuc",{
+            listingnews:rows.recordsets[0],
+        });
+    })
 })
 // render about-us, liveshow
 app.get("/about-us",function (req,res){

@@ -287,6 +287,23 @@ a:hover {
 }
 
 /*css chitiettintuc */
+.detail-news-content {
+    width: 100%;
+    float: left;
+}
+.picture {
+    width: 50%;
+    float: left;
+}
+.picture img {
+    width: 95%;
+    height: auto;
+}
+.caption {
+    float: left;
+    font-size: 13px;
+    width: 90%;
+}
 .detail-news-content-margin {
     margin-top: 15px;
 }
