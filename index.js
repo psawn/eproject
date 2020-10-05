@@ -44,6 +44,7 @@ app.get("/dang-ky",function (req,res) {
 app.get("/dang-nhap",function (req,res) {
     res.render("dangnhap");
 })
+
 app.get("/chitiettintuc",function (req,res) {
     let sql_text='select * from T2005E_LMAO_TinTuc where IDTinTuc != \'1\'';
     db.query(sql_text,function (err,rows) {
