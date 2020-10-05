@@ -70,9 +70,10 @@
                             <a href="#">
                                 <article class="realease-post">
                                     <img src="<%= e.Anh %>">
-                                    <div class="play-icon"><i class="fas fa-music"></i></div>
+                                    <div class="play-icon"><i class="fas fa-shopping-cart"></i></div>
                                     <h3 style="font-size: 24px"><%= e.TenBaiHat %></h3>
                                     <p><%= e.NgheDanh %></p>
+                                    <p class="price"><%= new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(e.Gia);%></p>
                                 </article>
                             </a>
                         </div>
@@ -122,9 +123,10 @@
                             <a href="#">
                                 <article class="single-post">
                                     <img src="<%= e.Anh %>">
-                                    <div class="play-icon"><i class="fas fa-music"></i></div>
+                                    <div class="play-icon"><i class="fas fa-shopping-cart"></i></div>
                                     <h3 style="font-size: 24px"><%= e.TenBaiHat %></h3>
                                     <p><%= e.NgheDanh %></p>
+                                    <p class="price"><%= new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(e.Gia);%></p>
                                 </article>
                             </a>
                         </div>
@@ -136,13 +138,13 @@
                     <div class="col-2">
                         <h2>Latest News</h2>
                         <p>Follow our News to stay well informed and keep up with us. We really have so much to share with you!</p>
-                        <a href="#" class="section-more">
+                        <a href="/tintuc" class="section-more">
                             See All
                         </a>
                     </div>
                     <% tintucs.map(e=>{ %>
                         <div class="col-5">
-                            <a href="/chitiettintuc">
+                            <a href="/tintuc/<%= e.IDTinTuc %>">
                                 <article class="news-post">
                                     <img src="<%= e.Anh %>">
                                     <div class="layer2"></div>

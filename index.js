@@ -45,14 +45,21 @@ app.get("/dang-nhap",function (req,res) {
     res.render("dangnhap");
 })
 
-app.get("/chitiettintuc",function (req,res) {
-    let sql_text='select * from T2005E_LMAO_TinTuc where IDTinTuc != \'1\'';
-    db.query(sql_text,function (err,rows) {
-        if(err) res.send(err);
-        else res.render("chitiettintuc",{
-            listingnews:rows.recordsets[0],
-        });
-    })
+app.get("/tintuc/:id",async function (req,res) {
+    let IDTinTuc =req.params.id;
+    const sql_text="select * from T2005E_LMAO_TinTuc where IDTinTuc !="+IDTinTuc+"select * from T2005E_LMAO_TinTuc where IDTinTuc ="+IDTinTuc;
+    let data = {
+        listingnews:[],
+        detailnews:{},
+    }
+    try {
+        const rows = await db.query(sql_text);
+        data.listingnews = rows.recordsets[0];
+        data.detailnews = rows.recordsets[1];
+    }catch (e) {
+        
+    }
+    res.render("chitiettintuc",data);
 })
 // render about-us, liveshow
 app.get("/about-us",function (req,res){
@@ -63,7 +70,13 @@ app.get("/live-show",function (req,res){
 })
 // render tintuc
 app.get("/tintuc",function (req,res) {
-    res.render("tintuc")
+    let sql_text="select * from T2005E_LMAO_TinTuc order by NgayDang desc";
+    db.query(sql_text,function (err,rows) {
+        if (err) res.send(err);
+        else res.render("tintuc",{
+            tintucs: rows.recordsets[0],
+        });
+    })
 })
 // render the loai, nghe si
 app.get("/EDM",function (req,res) {
