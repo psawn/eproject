@@ -59,8 +59,8 @@
         <div class="container">
             <div class="new-realease">
                 <div class="new-realease-tittle">
-                    <h2>New Realeases</h2>
-                    <a href="#" class="section-more">
+                    <h2>Top Selling</h2>
+                    <a href="/top-selling" class="section-more">
                         See All
                     </a>
                 </div>
@@ -85,13 +85,13 @@
                     <div class="col-2">
                         <h2>Upcoming Events</h2>
                         <p>Here's everything you need to know about each major music event!</p>
-                        <a href="#" class="section-more">
+                        <a href="/live-show" class="section-more">
                             See All
                         </a>
                     </div>
                     <% events.map(e=>{ %>
                         <div class="col-5">
-                            <a href="#">
+                            <a href="/event/<%= e.IDEvent %>">
                                 <article class="event-post">
                                     <img src="<%= e.Anh %>">
                                     <div class="layer"></div>
@@ -113,7 +113,7 @@
             <div class="new-single">
                 <div class="new-single-tittle">
                     <h2>New Singles</h2>
-                    <a href="#" class="section-more">
+                    <a href="/top-selling" class="section-more">
                         See All
                     </a>
                 </div>

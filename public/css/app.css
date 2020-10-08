@@ -3,6 +3,7 @@ body{
     background-color: #f8f9fa;
     font-size: 14px;
     color:#2e2e2e;
+    box-sizing: border-box;
 }
 a:hover {
     text-decoration: none;
@@ -402,7 +403,7 @@ a:hover {
     margin-top: 10px;
     margin-bottom: 100px;
 }
-input[type=text], input[type=password] {
+.input-type {
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -410,7 +411,7 @@ input[type=text], input[type=password] {
     border: none;
     background: #f1f1f1;
 }
-input[type=text]:focus, input[type=password]:focus {
+input-type:focus {
     background-color: #ddd;
     outline: none;
 }
@@ -452,8 +453,91 @@ a {
 #btn-show-pass:hover {
     cursor: pointer;
 }
-
-/* css tintuc */
+/* css cart */
+.item {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid #92999e;
+    margin-top: 20px;
+    height: 160px;
+}
+.image img {
+    width: 120px;
+}
+.pass-quantity {
+    margin-top: -15px;
+}
+.product-line-price {
+    margin-top: 20px;
+}
+.remove-product {
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 25px;
+}
+.cart-form {
+    margin-top: 20px;
+    border: 1px solid #92999e;
+    height: 400px;
+}
+.input-form {
+    height: 70px;
+    margin-left: 50px;
+}
+.long {
+    width: 250px;
+}
+.pay {
+    margin-left: 80px;
+    font-size: 24px;
+    margin-top: 130px;
+    cursor: pointer;
+}
+.pay:focus {
+    outline: none;
+    box-shadow: none;
+}
+/* css purchasesuccess */
+#wrapper{
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+#wrapper h1 {
+    olor: #EEE;
+    text-shadow: -1px -2px 3px rgba(17, 17, 17, 0.3);
+    text-align: center;
+    font-family: "Monsterrat", sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-bottom: -5px;
+    transition: 0.4s;
+}
+#wrapper  h1 underline {
+    border-top: 5px solid rgba(26, 188, 156, 0.3);
+    border-bottom: 5px solid rgba(26, 188, 156, 0.3);
+}
+@keyframes pulse {
+    0%{
+        transform: scale(1);
+    }
+    66% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.infinite {
+    animation: pulse 1.5s infinite;
+}
+#wrapper p {
+    margin-top: 40px;
+    text-align: center;
+}
+/* css news */
 .all-listing-news {
     height: 490px;
 }

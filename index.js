@@ -38,13 +38,28 @@ app.get("/",function (req,res) {
         });
     })
 })
-app.get("/dang-ky",function (req,res) {
-    res.render("dangky");
-})
-app.get("/dang-nhap",function (req,res) {
-    res.render("dangnhap");
-})
 
+app.get("/register",function (req,res) {
+    res.render("register");
+})
+app.get("/signin",function (req,res) {
+    res.render("signin");
+})
+app.get("/about-us",function (req,res){
+    res.render("aboutus")
+})
+app.get("/live-show",function (req,res){
+    res.render("liveshow")
+})
+app.get("/tintuc",function (req,res) {
+    let sql_text="select * from T2005E_LMAO_TinTuc order by NgayDang desc";
+    db.query(sql_text,function (err,rows) {
+        if (err) res.send(err);
+        else res.render("news",{
+            tintucs: rows.recordsets[0],
+        });
+    })
+})
 app.get("/tintuc/:id",async function (req,res) {
     let IDTinTuc =req.params.id;
     const sql_text="select * from T2005E_LMAO_TinTuc where IDTinTuc !="+IDTinTuc+"select * from T2005E_LMAO_TinTuc where IDTinTuc ="+IDTinTuc;
@@ -57,28 +72,32 @@ app.get("/tintuc/:id",async function (req,res) {
         data.listingnews = rows.recordsets[0];
         data.detailnews = rows.recordsets[1];
     }catch (e) {
-        
+
     }
-    res.render("chitiettintuc",data);
+    res.render("detailnews",data);
 })
-// render about-us, liveshow
-app.get("/about-us",function (req,res){
-    res.render("aboutus")
+app.get("/event/:id",async function (req,res) {
+    let IDEvent =req.params.id;
+    const sql_text="select * from T2005E_LMAO_Event where IDEvent !="+IDEvent+"select * from T2005E_LMAO_Event where IDEvent ="+IDEvent;
+    let data = {
+        listingevents:[],
+        detailevent:{},
+    }
+    try {
+        const rows = await db.query(sql_text);
+        data.listingevents = rows.recordsets[0];
+        data.detailevent = rows.recordsets[1];
+    }catch (e) {
+
+    }
+    res.render("detailevent",data);
 })
-app.get("/live-show",function (req,res){
-    res.render("liveshow")
+app.get("/cart",function (req,res) {
+    res.render("cart")
 })
-// render tintuc
-app.get("/tintuc",function (req,res) {
-    let sql_text="select * from T2005E_LMAO_TinTuc order by NgayDang desc";
-    db.query(sql_text,function (err,rows) {
-        if (err) res.send(err);
-        else res.render("tintuc",{
-            tintucs: rows.recordsets[0],
-        });
-    })
+app.get("/purchasesuccess",function (req,res) {
+    res.render("purchasesuccess");
 })
-// render the loai, nghe si
 app.get("/EDM",function (req,res) {
     res.render("EDM");
 })
@@ -104,7 +123,6 @@ app.get("/thanh-toan",function (req,res) {
     res.render("buy");
 })
 
-// render about us, liveshow
 app.get("/about-us",function (req,res){
     res.render("aboutus")
 })
