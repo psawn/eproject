@@ -78,7 +78,7 @@ app.get("/tintuc/:id",async function (req,res) {
 })
 app.get("/event/:id",async function (req,res) {
     let IDEvent =req.params.id;
-    const sql_text="select * from T2005E_LMAO_Event where IDEvent !="+IDEvent+"select * from T2005E_LMAO_Event where IDEvent ="+IDEvent;
+    const sql_text="select top 5 * from T2005E_LMAO_Event where IDEvent !="+IDEvent+"select * from T2005E_LMAO_Event where IDEvent ="+IDEvent;
     let data = {
         listingevents:[],
         detailevent:{},
