@@ -4,13 +4,43 @@ body{
     font-size: 13px;
     color:#2e2e2e;
 }
+.menu {
+    font-size: 16px;
+}
+.menu .form-margin-left {
+    margin-left:150px ;
+}
+.menu .user-account {
+    font-size: 22px;
+}
+.slide-show {
+    margin-top: 10px;
+}
+.button-slide {
+    background-image: linear-gradient(to right, #fac184 0%, #a556aa 40%, #8fc0f4 61%, #84fab0 100%);
+    transition:0.5s;
+    background-size: 190% auto;
+    font-weight: 900;
+    padding: 10px 20px;
+    border-radius: 15px;
+    opacity: 0.8;
+    font-size: 16px;
+    box-shadow: 0 5px 20px rgba(246,86,86,0.45);
+    color: #f3f3f3;
+}
+.button-slide:hover {
+    text-decoration: none;
+    cursor:pointer;
+    background-position: right center;
+    color: #ffffff;
+}
 .content-area{
     padding-top: 30px;
+    background-color: #f9f9f9;
 }
 .live-show-area{
     margin-bottom: 30px;
     padding: 30px 30px;
-    background-color: #1b2039;
     border-radius: 5px;
     box-shadow:  0 0 50px 0 rgba(0,0,0,0.3) ;
 }
@@ -20,6 +50,12 @@ body{
 }
 .image-area-center{
     text-align: center;
+}
+.image-area-center img{
+    margin-bottom: 25px;
+    border-radius: 5px;
+    height: auto;
+    max-width: 100%;
 }
 .live-show-date{
     width: 90px;
@@ -44,19 +80,51 @@ body{
 }
 .header-area .name-live-show{
     text-align: left;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 25px;
+    color: #ffbb00;
 }
 .header-area .adress-live-show{
     float: right;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 25px;
+    color: #ffbb00;
 }
 .entry-content-area{
     margin-top: 15px;
 }
 .entry-content-area p{
-    color: #ffffff;
+    color: #333333;
     line-height: 1.5;
     margin-bottom: 15px;
+}
+.page-sharing{
+    margin: 30px 0;
+}
+.page-sharing-title{
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.page-sharing-view ul{
+    margin: -3px;
+    list-style: none;
+    padding: 0;
+}
+.page-sharing-view ul li{
+    float: left;
+    display: block;
+    padding: 3px;
+    border-radius: 50%;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: #ffffff;
+    background-color: #a9a8b3;
+    font-size: 20px;
+    margin: 0 3px;
+}
+.page-sharing-view ul li:hover{
+    background-color: #ffbb00;
 }

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/libs/fontawesome/css/all.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/liveshow.css" type="text/css">
+    <link rel="stylesheet" href="/css/liveshowall.css" type="text/css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -58,41 +58,33 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="content-area col-12">
-                <div class="live-show-area col 12">
-                    <div class="image-area">
-                        <div class="image-area-center">
-                            <span class="live-show-date">March 11, 2021 8:00pm</span>
-                            <img src="imgs/event1.jpg" alt="Live show 1"/>
+            <div class="live-show-listing col-12">
+                <div class="live-show-content row">
+                    <% events.map(function(e){ %>
+                    <div class="live-show-event col-6">
+                        <div class="live-show-image">
+                            <a href="#"><img class="live-show-image-area"  alt="details" src="<%= e.Anh %>"/></a>
+                            <div class="live-show-status">Showing</div>
+                            <div class="live-show-ticket-price">$39</div>
+                        </div>
+                        <div class="live-show-title">
+                            <a href="#"><%= e.TenEvent %></a>
+                        </div>
+                        <div class="live-show-details">
+                            <div class="live-show-date"><i class="fas fa-calendar-alt"></i><%= e.NgayDienRa %>></div>
+                            <div class="live-show-location"><i class="fas fa-map-marker-alt"></i><%= e.DiaChi %></div>
+                        </div>
+                        <div class="live-show-text">
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution link of letters, as opposed to using 'Content here, content here', making it look like readable English.
                         </div>
                     </div>
-                    <div class="content-area">
-                        <div class="header-area">
-                            <span class="name-live-show col-6">Sorry Babushka</span>
-                            <span class="adress-live-show col-6">1 East Plumb Branch St.Saint Petersburg, FL 33702</span>
-                        </div>
-                        <div class="entry-content-area col-12">
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                                The point of using Lorem Ipsum is that it has a more-or-less normal distribution link of letters, as opposed to using 'Content here, content here', making it look like readable English.
-                                Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-                                If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
-                                All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
-                                The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
-                        </div>
-                    </div>
-                    <div class="page-sharing col-12">
-                        <div class="page-sharing-title">Share This Live Show </div>
-                        <div class="page-sharing-view">
-                            <ul>
-                                <li><i class="fab fa-facebook-f"></i></li>
-                                <li><i class="fab fa-twitter"></i></li>
-                                <li><i class="fab fa-instagram"></i></li>
-                                <li><i class="fab fa-facebook-messenger"></i></li>
-                                <li><i class="far fa-envelope"></i></li>
-                            </ul>
-                        </div>
-                    </div>
+                    <% }) %>
+                </div>
+                <div class="live-show-pagination">
+                    <ul>
+                        <li><a href="#">Previous</a></li>
+                        <li><a href="#">Next</a></li>
+                    </ul>
                 </div>
             </div>
         </div>

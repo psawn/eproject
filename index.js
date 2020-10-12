@@ -122,10 +122,34 @@ app.get("/top-selling",function (req,res) {
 app.get("/thanh-toan",function (req,res) {
     res.render("buy");
 })
-
-app.get("/about-us",function (req,res){
-    res.render("aboutus")
+app.get("/live-show-all",function (req,res){
+    let sql_text = "SELECT TOP 10 * FROM T2005E_LMAO_Event ORDER BY IDEvent DESC"
+    db.query(sql_text,function (err,rows){
+        if(err) res.send(err);
+        else res.render("liveshowall",{
+           events: rows.recordset
+        });
+    })
 })
-app.get("/live-show",function (req,res){
-    res.render("liveshow")
+app.get("live-show/:id", async function  (req,res){
+    const LiveShowID = req.params.id;
+    const sql_text = "SELECT TOP 10 * FROM T2005E_LMAO_Event WHERE IDEvent = "+IDEvent;
+    let data = {
+        events: [],
+        eventHienTai: {}
+    }
+    await db.query(sql_text).then(rows=>{
+        const events = rows.recordsets[0];
+        let eventHienTai = null;
+        for(let d of events){
+            if(d.events == IDEvent){
+                data.eventHienTai = d;
+                break;
+            }
+        }
+        data.events = events;
+        data.eventHienTai = eventHienTai;
+    }).catch(err=>{
+
+    })
 })
